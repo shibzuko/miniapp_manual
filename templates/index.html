@@ -9,8 +9,15 @@
 </head>
 <body>
 <div class="container">
-    <h1>Vless VPN</h1>
+    <!-- Логотип вместо заголовка -->
+    <img class="logo" src="https://s3.ru1.storage.beget.cloud/03da8e48d5ca-myfirsts3/logo1_mini.png" alt="Vless VPN">
 
+    <div class="section_static_key">
+        <div class="key-box">
+            <span id="staticKey">Загрузка ключа...</span>
+        </div>
+        <button class="copy-button" onclick="copyStaticKey()">Скопировать ключ</button>
+    </div>
     <div class="section_apple">
         <!-- iOS Section -->
         <a href="https://apps.apple.com/ru/app/v2raytun/id6476628951?platform=iphone"
@@ -24,8 +31,7 @@
                 </div>
             </div>
         </a>
-        <a href="https://vless-outline.ru/auto/?url=v2RayTun://import/{static_key}"
-           style="text-decoration: none; color: inherit;">
+        <a id="appleVPNLink" href="#" onclick="openExternalLink(event)" style="text-decoration: none; color: inherit;">
             <div class="section">
                 <img class="icon" src="https://s3.ru1.storage.beget.cloud/03da8e48d5ca-myfirsts3/download_logo1.png"
                      alt="Icon">
@@ -37,7 +43,7 @@
         </a>
 
 
-        <a href="https://vless-outline.ru/auto/?url=v2RayTun://import/{static_key}"
+        <a href="https://vless-outline.ru/auto/?url=v2RayTun://import/{{ staticKey }}"
            style="text-decoration: none; color: inherit;">
             <div class="section_manual">
                 <img class="icon" src="https://s3.ru1.storage.beget.cloud/03da8e48d5ca-myfirsts3/manual_logo1.png"
@@ -62,8 +68,7 @@
                 </div>
             </div>
         </a>
-        <a href="https://vless-outline.ru/auto/?url=v2RayTun://import/{static_key}"
-           style="text-decoration: none; color: inherit;">
+        <a id="androidVPNLink" href="#" onclick="openExternalLink(event)" style="text-decoration: none; color: inherit;">
             <div class="section">
                 <img class="icon" src="https://s3.ru1.storage.beget.cloud/03da8e48d5ca-myfirsts3/download_logo1.png"
                      alt="Icon">
@@ -98,8 +103,7 @@
                 </div>
             </div>
         </a>
-        <a href="https://vless-outline.ru/auto/?url=v2RayTun://import/{static_key}"
-           style="text-decoration: none; color: inherit;">
+        <a id="windowsVPNLink" href="#" onclick="openExternalLink(event)" style="text-decoration: none; color: inherit;">
             <div class="section">
                 <img class="icon" src="https://s3.ru1.storage.beget.cloud/03da8e48d5ca-myfirsts3/download_logo1.png"
                      alt="Icon">
@@ -134,8 +138,7 @@
                 </div>
             </div>
         </a>
-        <a href="https://vless-outline.ru/auto/?url=v2RayTun://import/{static_key}"
-           style="text-decoration: none; color: inherit;">
+        <a id="linuxVPNLink" href="#" onclick="openExternalLink(event)" style="text-decoration: none; color: inherit;">
             <div class="section">
                 <img class="icon" src="https://s3.ru1.storage.beget.cloud/03da8e48d5ca-myfirsts3/download_logo1.png"
                      alt="Icon">
@@ -156,7 +159,7 @@
             </div>
         </a>
     </div>
-    <button class="close-button">Закрыть</button>
+    <button class="close-button" onclick="closeWindow()">Закрыть</button>
 </div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script src="{{ url_for('static', filename='script.js') }}"></script>

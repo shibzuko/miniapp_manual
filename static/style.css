@@ -1,26 +1,97 @@
 /* static/style.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
+    background: linear-gradient(-45deg, #40667d, #9ba9d1, #e4e4e4, #cad4ff);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+
+.logo {
+    display: block;
+    margin: 10px auto; /* Центрируем и даём немного пространства сверху/снизу */
+    width: 100px; /* Ограничение ширины */
+    height: auto; /* Сохранение пропорций */
+
+    background: none; /* Убираем фон */
+    border: none; /* Убираем границы */
+
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1)); /* Тень только для видимых частей PNG */
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .container {
     width: 90%;
     max-width: 600px;
-    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.section_static_key {
+    width: 90%;
+    margin: 0 auto; /* Центрирование блока */
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.copy-button {
+    width: 100%;
+    font-size: 15px;
+    margin: 0 auto; /* Центрирование блока */
+    display: flex;
+    justify-content: center;  /* Центрируем текст кнопки */
+    align-items: center; /* Центрируем текст по вертикали */
+    /*justify-content: center; */ /* Если нужно центрировать содержимое внутри блока */
+    background: #f4f4f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 0px 0px 5px 5px;
+    padding: 3px;
+    margin-bottom: 0px;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.key-box {
+    font-size: 10px; /* Размер текста */
+    font-family: monospace;
+    background: #e9e9e9;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+    word-wrap: break-word;
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 0px;
+
 }
 
 .section_apple,
@@ -28,10 +99,11 @@ h1 {
 .section_windows,
 .section_linux {
   margin-bottom: 40px; /* отступ между блоками */
+
 }
 
 .section_manual {
-    width: 80%;
+    width: 90%;
     margin: 0 auto; /* Центрирование блока */
     display: flex;
     align-items: center;
@@ -42,10 +114,11 @@ h1 {
     padding: 10px;
     margin-bottom: 10px;
     transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section {
-    width: 80%;
+    width: 90%;
     margin: 0 auto; /* Центрирование блока */
     display: flex;
     align-items: center;
@@ -55,6 +128,7 @@ h1 {
     padding: 10px;
     margin-bottom: 10px;
     transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section:hover,
