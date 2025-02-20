@@ -62,13 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Функция для открытия во внешнем браузере
     window.openExternalLink = function (event) {
-        event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+        event.preventDefault(); // Останавливаем стандартный переход по ссылке
+
+        const link = event.target.closest("a"); // Находим родительский <a>
+        if (!link || !link.href) return;
 
         if (window.Telegram && Telegram.WebApp) {
-            const url = vpnLink.getAttribute("data-url");
-            Telegram.WebApp.openLink(url, { try_instant_view: false });
+            Telegram.WebApp.openLink(link.href, { try_instant_view: false });
         } else {
-            alert("Ошибка: Telegram WebApp не доступен!");
+            window.open(link.href, "_blank"); // Открытие в браузере, если Telegram API не доступен
         }
     };
 
