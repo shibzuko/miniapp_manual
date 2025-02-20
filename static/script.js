@@ -13,7 +13,7 @@ function applyDynamicStyles() {
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    console.log("Страница загружена");
+//    console.log("Страница загружена");
 
     const tg = window.Telegram.WebApp;
 
@@ -33,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.warn("StaticKey не найден в URL");
     }
-
-//    alert(`decodedStaticKey: ${decodedStaticKey}`);
 
     // Подставляем статический ключ в ссылку Apple
     const appleVPNLink = document.getElementById("appleVPNLink");
@@ -111,21 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //    photo_url: ${myData}
     //    (${tg.initDataUnsafe.user.language_code})`;
 
-    //    alert(`tg.initDataUnsafe:\n\n${profName}`);
-
-    //    alert(`tg.initDataUnsafe:\n\n${my_platform}\n${user_id}\n${username}\n${tg.initDataUnsafe.user.language_code}`);
-
-    //    alert(`tg.initDataUnsafe: ${tg.initDataUnsafe.user.username}`);
-    //    alert(`Платформа: ${tg.platform}`);
-        //    alert(`Платформа: ${tg.initData.user}`);
-    //    console.log(tg.initDataUnsafe.user);
-    //    alert(`Платформа: ${tg.initDataUnsafe}`);
-    //    alert(JSON.stringify(tg.initDataUnsafe, null, 2));
-    //    alert(`Платформа: ${tg.user.id}`);
-
-
-
-    alert("Страница загружена2");
     // Получаем платформу из Telegram WebApp
     const platform = window.Telegram && Telegram.WebApp && Telegram.WebApp.platform
         ? Telegram.WebApp.platform.toLowerCase()
