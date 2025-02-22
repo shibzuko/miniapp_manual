@@ -54,14 +54,14 @@ h1 {
 }
 
 .section_static_key {
-    width: 93%;
+    width: 90%;
     margin: 0 auto; /* Центрирование блока */
     background: #f9f9f9;
     border: 1px solid #ddd;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 }
 
 .copy-button {
@@ -74,11 +74,21 @@ h1 {
     /*justify-content: center; */ /* Если нужно центрировать содержимое внутри блока */
     background: #f4f4f9;
     border: 1px solid #e0e0e0;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 3px 3px;
     padding: 3px;
     margin-bottom: 0px;
     transition: transform 0.2s;
     text-align: center;
+}
+
+.key-description p {
+    margin: 2px;
+}
+
+.key-description {
+    font-size: 8px; /* Размер текста */
+    font-family: monospace;
+    padding: 0px 0px 0px 4px;
 }
 
 .key-box {
@@ -86,7 +96,7 @@ h1 {
     font-family: monospace;
     background: #e9e9e9;
     padding: 5px;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
     word-wrap: break-word;
     max-width: 100%;
     text-align: left;

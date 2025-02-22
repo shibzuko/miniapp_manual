@@ -37,25 +37,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Подставляем статический ключ в ссылку Apple
     const appleVPNLink = document.getElementById("appleVPNLink");
     if (appleVPNLink) {
-        appleVPNLink.href = `https://vless-outline.ru/auto/?url=v2RayTun://import/${encodeURIComponent(decodedStaticKey)}`;
+        appleVPNLink.href = `https://vless-outline.ru/auto/?url=streisand://import/${encodeURIComponent(decodedStaticKey)}`;
     }
 
     // Подставляем статический ключ в ссылку Android
     const androidVPNLink = document.getElementById("androidVPNLink");
     if (androidVPNLink) {
-        androidVPNLink.href = `https://vless-outline.ru/auto/?url=v2RayTun://import/${encodeURIComponent(decodedStaticKey)}`;
+        androidVPNLink.href = `https://vless-outline.ru/auto/?url=v2raytun://import/${encodeURIComponent(decodedStaticKey)}`;
     }
 
     // Подставляем статический ключ в ссылку Windows 1
     const windowsVPNLink = document.getElementById("windowsVPNLink");
     if (windowsVPNLink) {
-        windowsVPNLink.href = `https://vless-outline.ru/auto/?url=v2RayTun://import/${encodeURIComponent(decodedStaticKey)}`;
+        windowsVPNLink.href = `https://vless-outline.ru/auto/?url=hiddify://import/${encodeURIComponent(decodedStaticKey)}`;
     }
 
     // Подставляем статический ключ в ссылку Linux
     const linuxVPNLink = document.getElementById("linuxVPNLink");
     if (linuxVPNLink) {
-        linuxVPNLink.href = `https://vless-outline.ru/auto/?url=v2RayTun://import/${encodeURIComponent(decodedStaticKey)}`;
+        linuxVPNLink.href = `https://vless-outline.ru/auto/?url=hiddify://import/${encodeURIComponent(decodedStaticKey)}`;
     }
 
     // Функция для открытия во внешнем браузере
