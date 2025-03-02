@@ -20,7 +20,7 @@ body {
 
     background: none; /* Убираем фон */
     border: none; /* Убираем границы */
-
+    margin-bottom: 20px;
     filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1)); /* Тень только для видимых частей PNG */
 }
 
@@ -60,7 +60,7 @@ h1 {
     border: 1px solid #ddd;
     padding: 5px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -86,7 +86,7 @@ h1 {
 }
 
 .key-description {
-    font-size: 8px; /* Размер текста */
+    font-size: 12px; /* Размер текста */
     font-family: monospace;
     padding: 0px 0px 0px 4px;
 }

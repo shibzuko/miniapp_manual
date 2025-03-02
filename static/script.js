@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const StaticKey = params.get("static_key");
 
-    let decodedStaticKey = "StaticKey не найден в URL";
+    let decodedStaticKey = "Ключ не найден";
     if (StaticKey) {
             try {
                 // Декодируем StaticKey из Base64
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error("Ошибка декодирования Base64:", error);
             }
     } else {
-        console.warn("StaticKey не найден в URL");
+        console.warn("Ключ не найден");
     }
 
     // Подставляем статический ключ в ссылку Apple
@@ -136,9 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.section_windows').style.display = 'block';
         document.querySelector('.section_linux').style.display = 'block';
     }
-
-    // Применяем динамические стили из Telegram WebApp (если указаны)
-    applyDynamicStyles();
 
     // Пример отправки данных через Telegram.WebApp.sendData
     document.getElementById('sendData')?.addEventListener('click', function() {
