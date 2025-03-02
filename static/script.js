@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Подставляем статический ключ в ссылку Apple
     const appleVPNLink = document.getElementById("appleVPNLink");
     if (appleVPNLink) {
-        appleVPNLink.href = `https://vless-outline.ru/auto/?url=streisand://import/${encodeURIComponent(decodedStaticKey)}`;
+        appleVPNLink.href = `https://vless-outline.ru/auto/?url=streisand://import/${decodedStaticKey}`;
     }
 
     // Подставляем статический ключ в ссылку Android
