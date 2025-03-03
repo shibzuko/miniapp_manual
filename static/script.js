@@ -1,21 +1,25 @@
 //static/script.js
-// Функция для установки динамических стилей из Telegram WebApp
-function applyDynamicStyles() {
-    if (window.Telegram && Telegram.WebApp && Telegram.WebApp.themeParams) {
-        // Если указан цвет фона в themeParams, применяем его
-        const bgColor = Telegram.WebApp.themeParams.bg_color;
-        if (bgColor) {
-            document.documentElement.style.setProperty('--app-bg-color', bgColor);
-        }
-    }
-}
 
 document.addEventListener('DOMContentLoaded', () => {
-
-
 //    console.log("Страница загружена");
 
     const tg = window.Telegram.WebApp;
+
+
+    // Функция для возврата назад
+    function goBack() {
+        Telegram.WebApp.close();
+    //        if (window.history.length > 1) {
+    //            window.history.back(); // Если есть история, идем назад
+    //        } else {
+    //            Telegram.WebApp.close(); // Если истории нет, закрываем Mini App
+    //        }
+    }
+
+    if (tg && tg.BackButton) {
+        tg.BackButton.show();
+        tg.BackButton.onClick(() => goBack());
+    }
 
     const params = new URLSearchParams(window.location.search);
     const StaticKey = params.get("static_key");
@@ -66,7 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!link || !link.href) return;
 
         if (window.Telegram && Telegram.WebApp) {
-            Telegram.WebApp.openLink(link.href, { try_instant_view: false });
+            window.open(link.href, "_blank");
+//            Telegram.WebApp.openLink(link.href, { try_instant_view: true });
+//            Telegram.WebApp.openLink(link.href, { try_instant_view: false });
         } else {
             window.open(link.href, "_blank"); // Открытие в браузере, если Telegram API не доступен
         }
@@ -92,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.closeWindow = function () {
         Telegram.WebApp.close();
     };
+
 
     //    const username = tg.initDataUnsafe.user.username;
     //    const user_id = tg.initDataUnsafe.user.id;
